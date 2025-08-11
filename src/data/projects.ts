@@ -15,8 +15,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'TypeScript', 'FastAPI', 'Python'],
     repo: 'https://github.com/StellarBearX/',
     demo: '#',
-    cover:
-      '/classicKK.JPG'
+    cover: `${import.meta.env.BASE_URL}classicKK.JPG`,
       // 'public/classicKK.JPG'
       },
   {
