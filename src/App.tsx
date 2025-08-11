@@ -50,7 +50,7 @@ function AnimatedBackgroundOrbs() {
 }
 
 export default function App() {
-  const { isDark, setIsDark } = useDarkMode();
+
   const [menuOpen, setMenuOpen] = React.useState(false);
   const year = new Date().getFullYear();
 
@@ -59,8 +59,8 @@ export default function App() {
       <AnimatedBackgroundOrbs />
       <ScrollProgressBar />
       <NavBar
-        isDark={isDark}
-        setIsDark={setIsDark}
+        //isDark={isDark}
+        //setIsDark={setIsDark}
         onMenuOpen={() => setMenuOpen(true)}
       />
       <AnimatePresence>
