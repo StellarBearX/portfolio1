@@ -16,7 +16,8 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/StellarBearX/',
     demo: '#',
     cover:
-      'public/classicKK.JPG'
+      '/classicKK.JPG'
+      // 'public/classicKK.JPG'
       },
   {
     title: 'Portfolio Starter',
@@ -24,7 +25,8 @@ export const PROJECTS: Project[] = [
     tech: ['Vite', 'React', 'Tailwind', 'Motion'],
     repo: 'https://github.com/StellarBearX/portfolio',
     demo: '#',
-    cover: 'public/pj1.png', 
+    cover: '/pj1.png', 
+    // cover: 'public/pj1.png', 
      
   },
   
@@ -35,6 +37,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Chart.js'],
     repo: 'https://github.com/StellarBearX/DII-GEN6-CompoundSEC',
     demo: '#',
-    cover:'public/java_oop12.jpg'
+    cover:'/java_oop12.jpg'
+    // cover:'public/java_oop12.jpg'
   },
 ]
