@@ -8,7 +8,6 @@ import Projects from "./sections/Projects";
 import CompetitionExperience from "./sections/CompetitionExperience";
 import Stack from "./sections/Stack";
 import Contact from "./sections/Contact";
-import { useDarkMode } from "./lib/useDarkMode";
 import { AnimatePresence, motion } from "framer-motion";
 import { SITE } from "./data/config";
 
