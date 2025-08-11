@@ -6,8 +6,7 @@ const COMPETITIONS = [
     year: 2024,
     award: 'Gold Medal',
     description: 'Competition in computer programming grades 10-12. National Arts and Crafts Student Competition, 70th Edition.',
-    image: '/comp-ict.png', 
-    // image: 'public/comp-ict.png', 
+    image: `${import.meta.env.BASE_URL}comp-ict.png`,
   },
 
   {
@@ -15,7 +14,7 @@ const COMPETITIONS = [
     year: 2025,
     award: 'Participant',
     description: 'Web development and cybersecurity hackathon for university students.',
-    image: '/classicKK.JPG', // ใส่รูปไว้ใน public/comp-cf.png
+    image: `${import.meta.env.BASE_URL}classicKK.JPG`,
   },
 ]
 

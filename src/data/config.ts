@@ -4,7 +4,7 @@ export const SITE = {
   tagline: 'A passionate developer crafting clean, and fast web experiences.',
   email: 'kunanan_w@cmu.ac.th',
   location: 'Phrae, TH',
-  profileImage: '/me.jpg',
+  profileImage: `${import.meta.env.BASE_URL}me.jpg`,
   socials: [
     { label: 'GitHub', href: 'https://github.com/StellarBearX', icon: 'github' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/', icon: 'linkedin' },

@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     tech: ['Vite', 'React', 'Tailwind', 'Motion'],
     repo: 'https://github.com/StellarBearX/portfolio',
     demo: '#',
-    cover: '/pj1.png', 
+    cover: `${import.meta.env.BASE_URL}pj1.png`, 
     // cover: 'public/pj1.png', 
      
   },
@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Chart.js'],
     repo: 'https://github.com/StellarBearX/DII-GEN6-CompoundSEC',
     demo: '#',
-    cover:'/java_oop12.jpg'
+    cover: `${import.meta.env.BASE_URL}java_oop12.jpg`
     // cover:'public/java_oop12.jpg'
   },
 ]
