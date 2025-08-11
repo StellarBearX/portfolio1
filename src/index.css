@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* THEME TOKENS */
+:root {
+  --bg: #fafafa;      /* พื้นหลัง (Light) - สีขาวนวล */
+  --fg: #0f172a;      /* ตัวอักษร (Light) - สีน้ำเงินเข้ม */
+  --card: rgba(59, 130, 246, 0.05);
+  --border: rgba(59, 130, 246, 0.1);
+  --primary: #3b82f6;  /* สีหลัก - น้ำเงิน */
+  --secondary: #8b5cf6; /* สีรอง - ม่วง */
+  --accent: #06b6d4;   /* สีเน้น - ฟ้า */
+  --success: #10b981;  /* สีสำเร็จ - เขียว */
+  --warning: #f59e0b;  /* สีเตือน - ส้ม */
+  --error: #ef4444;    /* สีผิดพลาด - แดง */
+}
+
+.dark {
+  --bg: #0f172a;      /* พื้นหลัง (Dark) - สีน้ำเงินเข้ม */
+  --fg: #f8fafc;      /* ตัวอักษร (Dark) - สีขาวนวล */
+  --card: rgba(59, 130, 246, 0.1);
+  --border: rgba(59, 130, 246, 0.2);
+  --primary: #60a5fa;  /* สีหลัก - น้ำเงินอ่อน */
+  --secondary: #a78bfa; /* สีรอง - ม่วงอ่อน */
+  --accent: #22d3ee;   /* สีเน้น - ฟ้าอ่อน */
+  --success: #34d399;  /* สีสำเร็จ - เขียวอ่อน */
+  --warning: #fbbf24;  /* สีเตือน - ส้มอ่อน */
+  --error: #f87171;    /* สีผิดพลาด - แดงอ่อน */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+}
+
+/* Smooth scrolling */
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 100px;
+}
+
+/* Selection color */
+::selection {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+/* Custom focus styles */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: var(--bg);
+  border-radius: 12px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  border-radius: 12px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
