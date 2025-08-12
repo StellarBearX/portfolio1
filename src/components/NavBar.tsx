@@ -118,7 +118,7 @@ export default function NavBar({ onMenuOpen }: NavBarProps) {
           
           <div className="flex items-center gap-3 md:gap-4">
             <motion.a
-              href="/portfolio1/resume"
+              href="/"
               className="hidden rounded-xl border border-[var(--primary)]/20 bg-[var(--primary)]/10 p-3 text-[var(--primary)] hover:bg-[var(--primary)]/20 hover:scale-105 transition-all duration-300 md:inline-block hover:shadow-lg hover:shadow-[var(--primary)]/20"
               title="Reload"
               whileHover={{ 
