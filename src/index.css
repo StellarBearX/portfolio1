@@ -1,30 +1,54 @@
 @import "tailwindcss";
 
-/* THEME TOKENS */
+/* THEME TOKENS - NEW COLOR SCHEME */
 :root {
-  --bg: #fafafa;      /* พื้นหลัง (Light) - สีขาวนวล */
-  --fg: #0f172a;      /* ตัวอักษร (Light) - สีน้ำเงินเข้ม */
-  --card: rgba(59, 130, 246, 0.05);
-  --border: rgba(59, 130, 246, 0.1);
-  --primary: #3b82f6;  /* สีหลัก - น้ำเงิน */
-  --secondary: #8b5cf6; /* สีรอง - ม่วง */
-  --accent: #06b6d4;   /* สีเน้น - ฟ้า */
-  --success: #10b981;  /* สีสำเร็จ - เขียว */
-  --warning: #f59e0b;  /* สีเตือน - ส้ม */
-  --error: #ef4444;    /* สีผิดพลาด - แดง */
+  /* Light Mode - Modern Warm Theme */
+  --bg: #fefefe;      /* พื้นหลัง - สีขาวบริสุทธิ์ */
+  --fg: #1a1a2e;      /* ตัวอักษร - สีน้ำเงินเข้ม */
+  --card: rgba(255, 107, 107, 0.05);
+  --border: rgba(255, 107, 107, 0.15);
+  
+  /* Primary Colors - Warm Red to Orange */
+  --primary: #ff6b6b;    /* สีหลัก - แดงส้ม */
+  --secondary: #ffa726;  /* สีรอง - ส้ม */
+  --accent: #ff7043;     /* สีเน้น - ส้มแดง */
+  
+  /* Supporting Colors */
+  --success: #66bb6a;    /* สีสำเร็จ - เขียว */
+  --warning: #ffb74d;    /* สีเตือน - ส้มเหลือง */
+  --error: #ef5350;      /* สีผิดพลาด - แดง */
+  
+  /* Additional Colors */
+  --purple: #ab47bc;     /* สีม่วง */
+  --blue: #42a5f5;       /* สีฟ้า */
+  --teal: #26a69a;       /* สีเขียวน้ำเงิน */
+  --pink: #ec407a;       /* สีชมพู */
+  --indigo: #5c6bc0;     /* สีน้ำเงินม่วง */
 }
 
 .dark {
-  --bg: #0f172a;      /* พื้นหลัง (Dark) - สีน้ำเงินเข้ม */
-  --fg: #f8fafc;      /* ตัวอักษร (Dark) - สีขาวนวล */
-  --card: rgba(59, 130, 246, 0.1);
-  --border: rgba(59, 130, 246, 0.2);
-  --primary: #60a5fa;  /* สีหลัก - น้ำเงินอ่อน */
-  --secondary: #a78bfa; /* สีรอง - ม่วงอ่อน */
-  --accent: #22d3ee;   /* สีเน้น - ฟ้าอ่อน */
-  --success: #34d399;  /* สีสำเร็จ - เขียวอ่อน */
-  --warning: #fbbf24;  /* สีเตือน - ส้มอ่อน */
-  --error: #f87171;    /* สีผิดพลาด - แดงอ่อน */
+  /* Dark Mode - Deep Ocean Theme */
+  --bg: #0a0a0f;      /* พื้นหลัง - สีดำน้ำเงินเข้ม */
+  --fg: #e8f4fd;      /* ตัวอักษร - สีฟ้าอ่อน */
+  --card: rgba(100, 181, 246, 0.1);
+  --border: rgba(100, 181, 246, 0.2);
+  
+  /* Primary Colors - Ocean Blue to Teal */
+  --primary: #64b5f6;    /* สีหลัก - ฟ้า */
+  --secondary: #4dd0e1;  /* สีรอง - ฟ้าเขียว */
+  --accent: #26c6da;     /* สีเน้น - ฟ้าเขียวอ่อน */
+  
+  /* Supporting Colors */
+  --success: #4db6ac;    /* สีสำเร็จ - เขียวน้ำเงิน */
+  --warning: #ffb74d;    /* สีเตือน - ส้มเหลือง */
+  --error: #ef5350;      /* สีผิดพลาด - แดง */
+  
+  /* Additional Colors */
+  --purple: #ba68c8;     /* สีม่วงอ่อน */
+  --blue: #42a5f5;       /* สีฟ้าอ่อน */
+  --teal: #4db6ac;       /* สีเขียวน้ำเงินอ่อน */
+  --pink: #f06292;       /* สีชมพูอ่อน */
+  --indigo: #7986cb;     /* สีน้ำเงินม่วงอ่อน */
 }
 
 /* Custom scrollbar */
@@ -75,12 +99,38 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Gradient text */
+/* Enhanced gradient text with new colors */
 .gradient-text {
   background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* New gradient variations */
+.gradient-text-warm {
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--warning));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cool {
+  background: linear-gradient(135deg, var(--blue), var(--teal), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-rainbow {
+  background: linear-gradient(135deg, var(--primary), var(--purple), var(--blue), var(--teal), var(--success));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: rainbow-shift 4s ease infinite;
 }
 
 /* Animated gradient border */
@@ -99,4 +149,93 @@ html {
   border-radius: 12px;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
+}
+
+/* New animated borders */
+.gradient-border-warm::before {
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--warning));
+}
+
+.gradient-border-cool::before {
+  background: linear-gradient(135deg, var(--blue), var(--teal), var(--accent));
+}
+
+.gradient-border-rainbow::before {
+  background: linear-gradient(135deg, var(--primary), var(--purple), var(--blue), var(--teal), var(--success));
+  background-size: 300% 300%;
+  animation: rainbow-shift 4s ease infinite;
+}
+
+/* Animations */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes rainbow-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+}
+
+/* Enhanced glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.dark .glow-primary {
+  box-shadow: 0 0 20px rgba(100, 181, 246, 0.3);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px rgba(255, 167, 38, 0.3);
+}
+
+.dark .glow-secondary {
+  box-shadow: 0 0 20px rgba(77, 208, 225, 0.3);
+}
+
+/* Color transition utilities */
+.color-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.dark .btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(100, 181, 246, 0.3);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 167, 38, 0.3);
+}
+
+.dark .btn-secondary:hover {
+  box-shadow: 0 8px 25px rgba(77, 208, 225, 0.3);
 }
