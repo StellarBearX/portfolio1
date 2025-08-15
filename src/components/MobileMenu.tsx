@@ -76,13 +76,6 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
                   <ThemeToggle isDark={isDark} setIsDark={setIsDark} />
                 </div>
                 
-                <a
-                  href="/resume"
-                  className="block w-full text-center rounded-xl border border-[var(--primary)]/20 bg-[var(--primary)]/10 px-4 py-3 text-sm font-medium text-[var(--primary)] hover:bg-[var(--primary)]/20 transition-all duration-200"
-                >
-                  Download Resume
-                </a>
-                
                 <div className="text-center text-xs text-[var(--fg)]/50">
                   © {new Date().getFullYear()} {SITE.name}
                 </div>
